@@ -89,7 +89,7 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="αποτέλεσμα"
-        android:id="@+id/result"
+        android:id="@+id/TxtResult"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
@@ -97,7 +97,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:id="@+id/subject"
+        android:id="@+id/TxtSubject"
         android:layout_alignTop="@+id/LblSubject"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -106,7 +106,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:id="@+id/preTime"
+        android:id="@+id/TxtPreTime"
         android:layout_alignTop="@+id/LblPreTime"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -115,7 +115,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:id="@+id/Squestions"
+        android:id="@+id/TxtSquestions"
         android:layout_alignTop="@+id/LblSquestions"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -124,7 +124,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:id="@+id/Aquestions"
+        android:id="@+id/TxtAquestions"
         android:layout_alignTop="@+id/LblAquestions"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -133,7 +133,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:id="@+id/Rquestions"
+        android:id="@+id/TxtRquestions"
         android:layout_alignTop="@+id/LblRquestions"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -142,7 +142,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:id="@+id/Fquestions"
+        android:id="@+id/TxtFquestions"
         android:layout_alignTop="@+id/LblWquestions"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -151,7 +151,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:id="@+id/grade"
+        android:id="@+id/TxtGrade"
         android:layout_below="@+id/LblGrade"
         android:layout_centerHorizontal="true" />
 
