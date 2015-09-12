@@ -1,7 +1,10 @@
 package org.teiath.ellak.ellakandroideducation;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 
 /**
@@ -23,14 +26,38 @@ import android.os.Bundle;
  * </ul>
  * Η Main Screen οδηγεί στην Results Screen
  */
-public class MainScreen extends Activity
+public class MainScreen extends Activity implements View.OnClickListener
 {
+
+    Button BtGoToResults;
 
     @Override
     protected void onCreate (Bundle savedInstanceState)
     {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.lay_main);
+        BtGoToResults = (Button) findViewById (R.id.button);
+        BtGoToResults.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v)
+    {
+        if (v == BtGoToResults)
+        {
+            Intent ActResult = new Intent (this, ResultScreen.class);
+            Bundle bu = new Bundle ();
+
+            bu.putString ("Mode","Εκπαίδευση");
+            bu.putString ("Subject", "Μηχανή");
+            bu.putString ("Pretime","60");
+            bu.putString("Squestions","20");
+            bu.putString("Aquestions","18");
+            bu.putString("Rquestions","16");
+            bu.putString("Fquestions","2");
+            ActResult.putExtras(bu);
+            startActivity (ActResult);
+        }
     }
 
 }
