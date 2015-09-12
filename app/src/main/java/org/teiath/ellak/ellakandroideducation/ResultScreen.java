@@ -24,42 +24,51 @@ import android.widget.TextView;
 public class ResultScreen extends Activity
 {
 
-    TextView subject = (TextView) findViewById(R.id.subject);         //γνωστικό αντικείμενο
-    TextView preTime = (TextView) findViewById(R.id.preTime);         //χρόνος εξέτασης
-    TextView squestions = (TextView) findViewById(R.id.Squestions);   //συνολικές ερωτήσεις
-    TextView aquestions = (TextView) findViewById(R.id.Aquestions);   //απαντήθηκαν
-    TextView rquestions = (TextView) findViewById(R.id.Rquestions);   //σωστές απαντήσεις
-    TextView fquestions = (TextView) findViewById(R.id.Fquestions);   //λανθασμένες απαντήσεις
-    TextView grade = (TextView) findViewById(R.id.grade);             //βαθμός
-    TextView result = (TextView) findViewById(R.id.result);           // αποτέλεσμα για το εάν πέρασε ή όχι
-
-
-
-
-
+    TextView TxtMode,                     //Κατάσταση λειτουργίας( Εκπαίδευση / Αξιολόγηση)
+             LblSubject,TxtSubject,       //γνωστικό αντικείμενο
+             LblPreTime,TxtPreTime,       //χρόνος εξέτασης
+             LblSquestions,TxtSquestions, //συνολικές ερωτήσεις
+             LblAquestions,TxtAquestions, //απαντήθηκαν
+             LblRquestions,TxtRquestions, //σωστές απαντήσεις
+             LblFquestions,TxtFquestions, //λανθασμένες απαντήσεις
+             LblGrade,TxtGrade,           //βαθμός
+             LblResult,TxtResult;         // αποτέλεσμα για το εάν πέρασε ή όχι
 
 
     @Override
     protected void onCreate (Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView (R.layout.lay_result);
+        setContentView(R.layout.lay_result);
+                                                       //Αντιστοίχιση με τα  TextViews του lay_result
+        TxtMode  = (TextView) findViewById(R.id.TxtMode);
+        TxtSubject = (TextView) findViewById(R.id.TxtSubject);
+        TxtPreTime = (TextView) findViewById(R.id.TxtPreTime);
+        TxtSquestions = (TextView) findViewById(R.id.TxtSquestions);
+        TxtAquestions = (TextView) findViewById(R.id.TxtAquestions);
+        TxtRquestions = (TextView) findViewById(R.id.TxtRquestions);
+        TxtFquestions = (TextView) findViewById(R.id.TxtFquestions);
+        TxtGrade = (TextView) findViewById(R.id.TxtGrade);
+        TxtResult = (TextView) findViewById(R.id.TxtResult);
+
+
+
         Intent myintent = getIntent();      //ετοιμαζουμε το intent και τα getextras που θα παρουμε απο τα άλλα activities
+        String Mode = myintent.getStringExtra("Mode");
         String Subject = myintent.getStringExtra("Subject");
         String PreTime = myintent.getStringExtra("Pretime");
         String Squestions = myintent.getStringExtra("Squestions");
         String Aquestions = myintent.getStringExtra("Aquestions");
         String Rquestions = myintent.getStringExtra("Rquestions");
         String Fquestions = myintent.getStringExtra("Fquestions");
-
-
-
-
-
-
-
-
-
+                                            //Population των TextViews με τις τιμές που πήραμε απ'το intent
+        TxtMode.setText (Mode);
+        TxtSubject.setText (Subject);
+        TxtPreTime.setText (PreTime);
+        TxtSquestions.setText (Squestions);
+        TxtAquestions.setText (Aquestions);
+        TxtRquestions.setText (Rquestions);
+        TxtFquestions.setText (Fquestions);
 
 
     }
